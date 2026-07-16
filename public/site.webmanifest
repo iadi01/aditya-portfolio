@@ -1,0 +1,23 @@
+{
+  "name": "Aditya Portfolio",
+  "short_name": "Aditya Portfolio",
+  "description": "Official Aditya Portfolio of Aditya Sharma (WTF Aadi), a full stack developer & software engineer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#93c5fd",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
