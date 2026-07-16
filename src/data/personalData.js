@@ -146,6 +146,81 @@ export const education = [
 
 export const blogs = [
   {
+    title: "Why WTF Aadi is the Ultimate Developer Nickname: My Personal Branding Journey",
+    excerpt: "The story of how I established my online identity as WTF Aadi and integrated it across my professional portfolio and coding projects.",
+    date: "July 2026",
+    readTime: "5 min read",
+    tags: ["Branding", "Personal", "Portfolio"],
+    category: "Branding",
+    color: "bg-red-100",
+    slug: "why-wtf-aadi-ultimate-developer-nickname-branding",
+    content: [
+      "In the competitive field of software development, a memorable nickname can make all the difference. That's why I chose the alias WTF Aadi. It stands out, is easy to remember, and consolidates all my coding profiles under a single term. This Aditya Portfolio website represents the intersection of my technical skills and my personal brand.",
+      "As a developer, my branding is built around the WTF Aadi name. When recruiters search for my work, this name connects my GitHub repositories, LinkedIn profile, and active web deployments. Under this banner, I build neobrutalist websites and tools that showcase my passion for web technologies.",
+      "Creating a cohesive developer presence is crucial for standing out in search results. By optimizing this Aditya Portfolio for keywords like WTF Aadi, Aadi Portfolio, and Aditya Sharma Portfolio, I have constructed an organic knowledge graph that displays my work to the tech community."
+    ]
+  },
+  {
+    title: "How to Build a BCA Student Portfolio That Gets You Hired in 2026",
+    excerpt: "A practical guide for computer application students in India on structuring their developer portfolio to land software roles.",
+    date: "July 2026",
+    readTime: "6 min read",
+    tags: ["BCA", "Careers", "Student Developer"],
+    category: "Student Journey",
+    color: "bg-green-100",
+    slug: "build-bca-student-portfolio-hired-2026",
+    content: [
+      "Pursuing a BCA degree at Amity University online, I quickly realized that practical projects are key to landing software engineering internships. Traditional resumes often fail to showcase a developer's true coding abilities. That is why building an interactive Aditya Portfolio is essential for showcasing real-world skills.",
+      "A great student portfolio should present clear links to live applications, verified GitHub repositories, and structured case studies. In my portfolio, I showcase projects like GitAura and Weather App, demonstrating my ability to build frontend interfaces and consume REST APIs. This hands-on developer projects showcase serves as proof of my capabilities.",
+      "Whether you are studying in Jamshedpur or anywhere in India, building a public repository and presenting it on a personal portfolio website shows adaptability. Master the fundamentals of HTML, CSS, JavaScript, and React, and start sharing your work online to stand out to hiring managers."
+    ]
+  },
+  {
+    title: "My Tech Stack: Building Scalable Full-Stack JavaScript Applications",
+    excerpt: "An overview of the modern technologies I use in Aditya Sharma Portfolio to develop fast and responsive web apps.",
+    date: "July 2026",
+    readTime: "5 min read",
+    tags: ["React", "NodeJS", "MongoDB"],
+    category: "Web Development",
+    color: "bg-yellow-100",
+    slug: "my-tech-stack-full-stack-javascript-applications",
+    content: [
+      "As an aspiring full stack developer, I focus on building decoupled JavaScript applications. The modern tech stack featured in this Aditya Sharma Portfolio includes React, Tailwind CSS, Node.js, and MongoDB. This combination enables me to design fast, user-friendly frontends supported by reliable database layers.",
+      "For state synchronization, I utilize REST APIs and WebSockets. For instance, in TeamJams, I engineered a real-time collaborative workspace utilizing Socket.io and MongoDB collections. I rely on Vercel and Netlify for optimized CDNs and rapid deployments, ensuring page speed indices are kept high.",
+      "Choosing the right frameworks is only the first step. Optimizing bundle sizes, reducing render-blocking assets, and adhering to semantic HTML principles ensures a smooth user experience. This tech stack forms the foundation of my coding journey as I continuously learn and ship new products."
+    ]
+  },
+  {
+    title: "Top Developer Portfolios in India: UI/UX Lessons from Aadi Portfolio",
+    excerpt: "A deep dive into neobrutalist web design, scroll-driven transitions, and responsive grid layouts in Aditya Portfolio.",
+    date: "June 2026",
+    readTime: "5 min read",
+    tags: ["UI/UX", "Tailwind", "CSS Grid"],
+    category: "Web Development",
+    color: "bg-purple-100",
+    slug: "top-developer-portfolios-india-ui-ux-lessons",
+    content: [
+      "Modern web design is shifting towards bold, high-contrast aesthetics. In this developer website, Aadi Portfolio, I adopted a neobrutalist style featuring thick black borders, primary colors, and offset drop shadows. This style breaks away from clean, generic layouts to present a distinct visual identity.",
+      "Using Tailwind CSS utilities, I created responsive cards that collapse dynamically from three columns on desktop to a single column on mobile. I also integrated interactive components like a custom keyboard-navigable terminal and sound synthesis. These elements keep recruiters engaged while exploring my projects.",
+      "A visually stunning portfolio website should never compromise on performance. By optimizing image assets and inlining critical CSS, this Aditya Portfolio guarantees a fast First Contentful Paint. Striking a balance between unique styling and fast loading speeds is key to crafting a premium developer portfolio."
+    ]
+  },
+  {
+    title: "Inside Aditya Portfolio: Designing a High-Performance Developer Showcase",
+    excerpt: "A deep dive into the engineering, tech stack, neobrutalist UI design, and performance optimizations behind Aditya Portfolio.",
+    date: "July 2026",
+    readTime: "5 min read",
+    tags: ["Portfolio", "Web Dev", "React"],
+    category: "Web Development",
+    color: "bg-blue-100",
+    slug: "inside-aditya-portfolio-designing-developer-showcase",
+    content: [
+      "Every developer needs a digital home, and this website—Aditya Portfolio—is mine. Built using React, Vite, and Tailwind CSS v4, this portfolio represents my journey as an aspiring Full Stack Developer from Jamshedpur, India. My goal was to create a fast, responsive, and memorable website that showcases my projects and coding skills.",
+      "Aditya Portfolio stands out by adopting a bold neobrutalist design language, featuring high-contrast borders, raw colors, and interactive terminal widgets. Under the hood, it is optimized for Core Web Vitals to achieve a fast LCP (Largest Contentful Paint) and Speed Index. The site also includes interactive features like a custom browser terminal, sound synthesis, and real-time navigation.",
+      "This Aditya Portfolio website showcases several projects, including GitAura (developer analytics), Weather App (live forecasts), and TeamJams (collaborative WebSocket space). By combining custom frontend features with clean SEO practices, I ensure recruiters can find my work and get in touch easily."
+    ]
+  },
+  {
     title: 'Best Website Designer in Jamshedpur: Building Professional Websites for Local Businesses',
     excerpt: 'Why choosing a local website designer in Jamshedpur can help shops, clinics, and startups build mobile-friendly sites that attract local customers.',
     date: 'June 2026',

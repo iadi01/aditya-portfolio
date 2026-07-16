@@ -147,7 +147,7 @@ function App() {
       ) : (
         <main className="w-full max-w-full overflow-x-hidden flex flex-col items-center gap-20 pt-32 pb-20">
           {/* SEO Accessibility Headings & Links (Invisible in UI) */}
-          <h1 className="sr-only">Aditya Sharma Portfolio | WTF Aadi | Full Stack Developer | Software Engineer | iadi0</h1>
+          <h1 className="sr-only">Aditya Portfolio | Aditya Sharma Portfolio | WTF Aadi | Full Stack Developer | Software Engineer | iadi0</h1>
           <nav aria-label="SEO Internal Links" className="sr-only">
             <a href="#home">Home</a>
             <a href="#about">About Aditya Sharma</a>
