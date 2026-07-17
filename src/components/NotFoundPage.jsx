@@ -37,7 +37,7 @@ export default function NotFoundPage() {
       {/* Decorations */}
       <ErrorDecorations />
 
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-4 w-full relative z-10 flex flex-col justify-center sharp-neobrutalist-text">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 py-4 w-full relative z-10 flex flex-col justify-center sharp-neobrutalist-text">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-14 w-full">
 
           {/* LEFT SECTION */}
@@ -168,15 +168,15 @@ export default function NotFoundPage() {
 
           </section>
 
-          {/* RIGHT SECTION */}
-          <section className="order-1 lg:order-2 flex justify-center relative items-center min-h-[250px] sm:min-h-[350px] md:min-h-[450px]">
+          {/* RIGHT SECTION - Mobile Centered and Responsive */}
+          <section className="order-1 lg:order-2 flex justify-center items-center relative min-h-[200px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] w-full overflow-visible">
             {/* Parallax Layer 1: Shapes Background */}
-            <div data-parallax=".4" className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+            <div data-parallax=".4" className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none w-full">
               <ErrorShapes />
             </div>
 
             {/* Parallax Layer 2: Robot Mascot Foreground */}
-            <div data-parallax=".8" className="relative z-20 flex justify-center pointer-events-none">
+            <div data-parallax=".8" className="relative z-20 flex justify-center items-center pointer-events-none w-full">
               <ErrorRobot />
             </div>
           </section>
