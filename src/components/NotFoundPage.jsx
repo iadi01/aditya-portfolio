@@ -43,12 +43,12 @@ export default function NotFoundPage() {
           {/* LEFT SECTION */}
           <section className="relative z-10 order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start sharp-neobrutalist-text">
             
-            {/* OOPS Speech Bubble Badge - Animated with Framer Motion retaining rotation */}
+            {/* OOPS Speech Bubble Badge - Sharp 90-degree corners */}
             <motion.div
               initial={{ opacity: 0, y: -80, rotate: -3 }}
               animate={{ opacity: 1, y: 0, rotate: -3 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 inline-block rounded-2xl border-4 border-black bg-pink-400 px-6 py-2 shadow-[6px_6px_0px_black] relative"
+              className="mb-6 inline-block border-4 border-black bg-pink-400 px-6 py-2 shadow-[6px_6px_0px_black] relative rounded-none"
               style={{
                 backfaceVisibility: "hidden",
                 transformStyle: "preserve-3d"
@@ -108,9 +108,9 @@ export default function NotFoundPage() {
               </motion.span>
             </h1>
 
-            {/* Page Not Found Banner - Safe inline style rotation to prevent animation overrides */}
+            {/* Page Not Found Banner - Sharp 90-degree corners */}
             <div 
-              className="mt-4 inline-block rounded-xl border-4 border-black bg-[#6E5CFE] px-8 py-4 shadow-[8px_8px_0px_black]"
+              className="mt-4 inline-block border-4 border-black bg-[#6E5CFE] px-8 py-4 shadow-[8px_8px_0px_black] rounded-none"
               style={{
                 transform: "rotate(-2deg)",
                 backfaceVisibility: "hidden",
@@ -122,9 +122,9 @@ export default function NotFoundPage() {
               </h2>
             </div>
 
-            {/* Description Box - Safe inline style rotation */}
+            {/* Description Box - Sharp 90-degree corners */}
             <div 
-              className="mt-10 max-w-lg rounded-2xl border-4 border-black bg-white p-7 shadow-[8px_8px_0px_black] text-left"
+              className="mt-10 max-w-lg border-4 border-black bg-white p-7 shadow-[8px_8px_0px_black] text-left rounded-none"
               style={{
                 transform: "rotate(-1deg)",
                 backfaceVisibility: "hidden",
@@ -141,11 +141,11 @@ export default function NotFoundPage() {
               </p>
             </div>
 
-            {/* Take me Home Button - Inline rotation and explicit SVG arrow from user spec */}
+            {/* Take me Home Button - Sharp 90-degree corners */}
             <button
               onClick={handleGoHome}
               onMouseEnter={() => audioSynth.playHover()}
-              className="mt-10 inline-flex items-center gap-3 px-6 sm:px-8 py-4 rounded-xl border-4 border-black bg-[#D2F801] shadow-[8px_8px_0_black] text-base sm:text-xl font-black transition duration-300 hover:translate-x-1 hover:-translate-y-1 hover:shadow-none cursor-pointer text-black"
+              className="mt-10 inline-flex items-center gap-3 px-6 sm:px-8 py-4 border-4 border-black bg-[#D2F801] shadow-[8px_8px_0_black] text-base sm:text-xl font-black transition duration-300 hover:translate-x-1 hover:-translate-y-1 hover:shadow-none cursor-pointer text-black rounded-none"
               style={{
                 transform: "rotate(-1deg)",
                 backfaceVisibility: "hidden",

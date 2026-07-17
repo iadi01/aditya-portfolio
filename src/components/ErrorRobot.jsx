@@ -6,7 +6,7 @@ export default function ErrorRobot() {
     <motion.img
       src={Robot}
       alt="404 Robot"
-      className="relative z-20 w-[380px] sm:w-[480px] md:w-[580px] lg:w-[680px] xl:w-[780px] select-none"
+      className="relative z-20 w-[450px] sm:w-[580px] md:w-[720px] lg:w-[860px] xl:w-[1000px] select-none"
       draggable={false}
       animate={{
         y: [0, -10, 0],
