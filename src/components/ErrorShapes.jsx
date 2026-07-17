@@ -1,50 +1,25 @@
 import { motion } from "framer-motion";
-import HexShape from "../assets/error/hex-shape.png";
 import Bubble from "../assets/error/question-bubble.png";
 
 export default function ErrorShapes() {
   return (
     <>
-      {/* Hexagon Background */}
-      <motion.img
-        src={HexShape}
-        alt=""
-        draggable={false}
-        className="
-          absolute
-          z-0
-          w-[230px]
-          sm:w-[330px]
-          md:w-[420px]
-          lg:w-[520px]
-          select-none
-          pointer-events-none
-        "
-        animate={{
-          scale: [1, 1.03, 1],
-          rotate: [-1, 1, -1]
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-
-      {/* Question Bubble */}
+      {/* Question Bubble (Hexagon Background image removed as requested) */}
       <motion.img
         src={Bubble}
         alt=""
         draggable={false}
         className="
           absolute
-          -top-8
-          right-5
+          -top-12
+          right-0
+          sm:right-4
+          md:right-8
           z-30
-          w-16
-          sm:w-20
-          md:w-24
-          lg:w-28
+          w-20
+          sm:w-24
+          md:w-28
+          lg:w-32
           select-none
           pointer-events-none
         "
@@ -63,12 +38,12 @@ export default function ErrorShapes() {
       <motion.span
         className="
           absolute
-          right-[26px]
-          sm:right-[34px]
-          md:right-[42px]
-          lg:right-[54px]
-          top-[16px]
-          sm:top-[12px]
+          right-[32px]
+          sm:right-[40px]
+          md:right-[48px]
+          lg:right-[68px]
+          top-[10px]
+          sm:top-[4px]
           z-40
           font-shrikhand
           font-black
@@ -95,7 +70,7 @@ export default function ErrorShapes() {
         className="
           absolute
           left-[48%]
-          -top-14
+          -top-20
           z-40
         "
         animate={{
