@@ -3,36 +3,38 @@ import { motion } from "framer-motion";
 export default function ErrorDecorations() {
   return (
     <div className="hidden md:block">
-      {/* LEFT Spark */}
+      
+      {/* LEFT Spark (Radiating lines above OOPS) */}
       <motion.div
-        className="absolute left-10 top-72 z-10"
-        animate={{ rotate: [-8, 8, -8] }}
-        transition={{ repeat: Infinity, duration: 4 }}
+        className="absolute left-32 top-52 z-10"
+        animate={{ rotate: [-5, 5, -5] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
       >
-        <div className="flex gap-4">
-          <span className="h-14 w-1 rounded bg-black rotate-[-40deg]" />
-          <span className="h-16 w-1 rounded bg-black rotate-[-8deg]" />
+        <div className="relative w-12 h-12 flex items-center justify-center">
+          <span className="absolute h-8 w-1 bg-black rounded transform -rotate-[35deg] origin-bottom -translate-x-3 -translate-y-1" />
+          <span className="absolute h-9 w-1 bg-black rounded transform rotate-[0deg] origin-bottom -translate-y-3" />
+          <span className="absolute h-8 w-1 bg-black rounded transform rotate-[35deg] origin-bottom translate-x-3 -translate-y-1" />
         </div>
       </motion.div>
 
-      {/* Center Spark */}
+      {/* Center Spark (Radiating lines above 404) */}
       <motion.div
-        className="absolute left-[46%] top-52"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ repeat: Infinity, duration: 2 }}
+        className="absolute left-[36%] top-24 z-10"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
       >
-        <div className="flex gap-3">
-          <span className="h-10 w-1 bg-black rotate-[-35deg]" />
-          <span className="h-12 w-1 bg-black" />
-          <span className="h-10 w-1 bg-black rotate-[35deg]" />
+        <div className="relative w-12 h-12 flex items-center justify-center">
+          <span className="absolute h-8 w-1 bg-black rounded transform -rotate-[35deg] origin-bottom -translate-x-3 -translate-y-1" />
+          <span className="absolute h-9 w-1 bg-black rounded transform rotate-[0deg] origin-bottom -translate-y-3" />
+          <span className="absolute h-8 w-1 bg-black rounded transform rotate-[35deg] origin-bottom translate-x-3 -translate-y-1" />
         </div>
       </motion.div>
 
       {/* Bottom Left Zigzag */}
       <motion.div
-        className="absolute bottom-32 left-12"
+        className="absolute bottom-32 left-12 z-10"
         animate={{ y: [0, -6, 0] }}
-        transition={{ repeat: Infinity, duration: 2.5 }}
+        transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
       >
         <svg width="110" height="22">
           <polyline
@@ -48,9 +50,9 @@ export default function ErrorDecorations() {
 
       {/* Right Zigzag */}
       <motion.div
-        className="absolute right-10 top-72"
+        className="absolute right-12 top-72 z-10"
         animate={{ y: [0, 5, 0] }}
-        transition={{ repeat: Infinity, duration: 3 }}
+        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
       >
         <svg width="90" height="22">
           <polyline
@@ -64,36 +66,38 @@ export default function ErrorDecorations() {
         </svg>
       </motion.div>
 
-      {/* Pink Square */}
+      {/* Pink Square (Left Side) */}
       <motion.div
-        className="absolute left-12 top-[58%]"
+        className="absolute left-12 top-[58%] z-10"
         animate={{
-          rotate: [-10, 10, -10],
+          rotate: [-15, 15, -15],
         }}
         transition={{
           repeat: Infinity,
           duration: 5,
+          ease: "easeInOut"
         }}
       >
-        <div className="h-14 w-14 border-4 border-black bg-pink-400 shadow-[6px_6px_0px_black]" />
+        <div className="h-14 w-14 border-4 border-black bg-pink-400 shadow-[6px_6px_0px_black] rounded-md" />
       </motion.div>
 
-      {/* Purple Square */}
+      {/* Purple Square (Top Right) */}
       <motion.div
-        className="absolute right-10 top-48"
+        className="absolute right-12 top-48 z-10"
         animate={{
           y: [0, -8, 0],
         }}
         transition={{
           repeat: Infinity,
           duration: 3,
+          ease: "easeInOut"
         }}
       >
-        <div className="h-6 w-6 border-4 border-black bg-[#6E5CFE]" />
+        <div className="h-6 w-6 border-4 border-black bg-[#6E5CFE] rounded-sm transform rotate-12" />
       </motion.div>
 
-      {/* Dots */}
-      <div className="absolute right-8 top-[45%] grid grid-cols-5 gap-3">
+      {/* Dots (Right Side) */}
+      <div className="absolute right-8 top-[45%] grid grid-cols-5 gap-3 z-10">
         {Array.from({ length: 25 }).map((_, i) => (
           <span
             key={i}
@@ -102,14 +106,14 @@ export default function ErrorDecorations() {
         ))}
       </div>
 
-      {/* Bottom Left Stripes */}
-      <div className="absolute bottom-10 left-10 h-24 w-24 border-4 border-black bg-white shadow-[6px_6px_0_black]">
+      {/* Bottom Left Stripes Block */}
+      <div className="absolute bottom-10 left-10 h-24 w-24 border-4 border-black bg-white shadow-[6px_6px_0_black] z-10 rounded-md overflow-hidden">
         <div className="absolute inset-0 bg-[repeating-linear-gradient(-45deg,#000_0px,#000_6px,transparent_6px,transparent_14px)]" />
       </div>
 
-      {/* Floating X */}
+      {/* Floating X (Right Side) */}
       <motion.div
-        className="absolute right-16 top-[44%] text-4xl font-black"
+        className="absolute right-16 top-[44%] text-4xl font-black z-10 select-none pointer-events-none"
         animate={{
           rotate: [0, 180, 360],
         }}

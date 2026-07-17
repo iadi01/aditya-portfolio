@@ -49,11 +49,11 @@ export default function ErrorShapes() {
           pointer-events-none
         "
         animate={{
-          y: [0, -10, 0],
-          rotate: [-4, 4, -4]
+          y: [0, -15, 0],
+          rotate: [-8, 8, -8]
         }}
         transition={{
-          duration: 3,
+          duration: 2.5,
           repeat: Infinity,
           ease: "easeInOut"
         }}
