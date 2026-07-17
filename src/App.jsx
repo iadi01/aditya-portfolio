@@ -30,7 +30,8 @@ function App() {
   const progressBarRef = useRef(null);
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const isBlogPage = currentPath.startsWith('/blog');
-  const is404Page = currentPath === '/404';
+  const isHomePage = currentPath === '/' || currentPath === '';
+  const is404Page = !isHomePage && !isBlogPage;
 
   // Auto-trigger Boot startup sound on first user gesture
   useEffect(() => {
