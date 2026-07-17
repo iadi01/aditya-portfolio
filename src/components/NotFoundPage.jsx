@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
 import { navigateTo } from "../utils/router";
 import { audioSynth } from "../utils/audioSynth";
 import useMouseParallax from "../hooks/useMouseParallax";
@@ -24,21 +23,36 @@ export default function NotFoundPage() {
       transition={{ duration: 0.6 }}
       className="relative w-screen h-screen max-h-screen overflow-hidden bg-[#FDFBF7] text-black font-sans flex flex-col justify-center items-center antialiased select-none"
     >
+      {/* Inject custom CSS for extreme Neobrutalist subpixel text sharpness and font smoothing */}
+      <style>{`
+        .sharp-neobrutalist-text {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-rendering: optimizeLegibility;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+        }
+      `}</style>
+
       {/* Decorations */}
       <ErrorDecorations />
 
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-4 w-full relative z-10 flex flex-col justify-center">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-4 w-full relative z-10 flex flex-col justify-center sharp-neobrutalist-text">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-14 w-full">
 
           {/* LEFT SECTION */}
-          <section className="relative z-10 order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <section className="relative z-10 order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start sharp-neobrutalist-text">
             
-            {/* OOPS Speech Bubble Badge */}
+            {/* OOPS Speech Bubble Badge - Animated with Framer Motion retaining rotation */}
             <motion.div
-              initial={{ opacity: 0, y: -80 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -80, rotate: -3 }}
+              animate={{ opacity: 1, y: 0, rotate: -3 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 inline-block rounded-2xl border-4 border-black bg-pink-400 px-6 py-2 shadow-[6px_6px_0px_black] transform -rotate-[3deg] relative"
+              className="mb-6 inline-block rounded-2xl border-4 border-black bg-pink-400 px-6 py-2 shadow-[6px_6px_0px_black] relative"
+              style={{
+                backfaceVisibility: "hidden",
+                transformStyle: "preserve-3d"
+              }}
             >
               <span className="font-mono font-black text-3xl text-black">
                 OOPS!
@@ -48,14 +62,16 @@ export default function NotFoundPage() {
               <div className="absolute -bottom-[10px] left-1/3 transform -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-pink-400" />
             </motion.div>
 
-            {/* 404 Heading with Paint-Order Outline Alignment for maximum sharpness */}
+            {/* 404 Heading with WebkitTextStroke and paintOrder for crisp fonts */}
             <h1 className="leading-none font-black tracking-tight text-[100px] sm:text-[140px] md:text-[170px] lg:text-[200px] xl:text-[230px] select-none flex justify-center lg:justify-start">
               <motion.span 
                 className="inline-block text-[#6E5CFE]" 
                 style={{ 
                   WebkitTextStroke: "4px black", 
                   paintOrder: "stroke fill",
-                  textShadow: "8px 8px 0px black" 
+                  textShadow: "8px 8px 0px black",
+                  backfaceVisibility: "hidden",
+                  transformStyle: "preserve-3d"
                 }}
                 animate={{ rotate: [-6, -4, -6] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -67,7 +83,9 @@ export default function NotFoundPage() {
                 style={{ 
                   WebkitTextStroke: "4px black", 
                   paintOrder: "stroke fill",
-                  textShadow: "8px 8px 0px black" 
+                  textShadow: "8px 8px 0px black",
+                  backfaceVisibility: "hidden",
+                  transformStyle: "preserve-3d"
                 }}
                 animate={{ rotate: [4, 6, 4] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -79,7 +97,9 @@ export default function NotFoundPage() {
                 style={{ 
                   WebkitTextStroke: "4px black", 
                   paintOrder: "stroke fill",
-                  textShadow: "8px 8px 0px black" 
+                  textShadow: "8px 8px 0px black",
+                  backfaceVisibility: "hidden",
+                  transformStyle: "preserve-3d"
                 }}
                 animate={{ rotate: [-4, -2, -4] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -88,16 +108,30 @@ export default function NotFoundPage() {
               </motion.span>
             </h1>
 
-            {/* Page Not Found Banner */}
-            <div className="mt-4 inline-block rounded-xl border-4 border-black bg-[#6E5CFE] px-8 py-4 shadow-[8px_8px_0px_black] transform -rotate-[2deg]">
+            {/* Page Not Found Banner - Safe inline style rotation to prevent animation overrides */}
+            <div 
+              className="mt-4 inline-block rounded-xl border-4 border-black bg-[#6E5CFE] px-8 py-4 shadow-[8px_8px_0px_black]"
+              style={{
+                transform: "rotate(-2deg)",
+                backfaceVisibility: "hidden",
+                transformStyle: "preserve-3d"
+              }}
+            >
               <h2 className="font-mono font-black text-2xl sm:text-3xl md:text-4xl uppercase text-black">
                 Page Not Found
               </h2>
             </div>
 
-            {/* Description Box */}
-            <div className="mt-8 max-w-lg rounded-2xl border-4 border-black bg-white p-6 shadow-[8px_8px_0px_black] text-left transform -rotate-[1deg]">
-              <p className="text-lg sm:text-xl font-bold leading-relaxed text-black">
+            {/* Description Box - Safe inline style rotation */}
+            <div 
+              className="mt-10 max-w-lg rounded-2xl border-4 border-black bg-white p-7 shadow-[8px_8px_0px_black] text-left"
+              style={{
+                transform: "rotate(-1deg)",
+                backfaceVisibility: "hidden",
+                transformStyle: "preserve-3d"
+              }}
+            >
+              <p className="text-xl sm:text-2xl font-bold leading-relaxed text-black">
                 Looks like you've wandered into the{" "}
                 <span className="bg-[#D2F801] px-2 py-0.5 font-black">
                   void.
@@ -107,14 +141,29 @@ export default function NotFoundPage() {
               </p>
             </div>
 
-            {/* Take me Home Button */}
+            {/* Take me Home Button - Inline rotation and explicit SVG arrow from user spec */}
             <button
               onClick={handleGoHome}
               onMouseEnter={() => audioSynth.playHover()}
-              className="mt-8 inline-flex items-center gap-3 px-6 sm:px-8 py-4 rounded-xl border-4 border-black bg-[#D2F801] shadow-[8px_8px_0_black] text-base sm:text-xl font-black transition duration-300 hover:translate-x-1 hover:-translate-y-1 hover:shadow-none cursor-pointer text-black transform -rotate-[1deg]"
+              className="mt-10 inline-flex items-center gap-3 px-6 sm:px-8 py-4 rounded-xl border-4 border-black bg-[#D2F801] shadow-[8px_8px_0_black] text-base sm:text-xl font-black transition duration-300 hover:translate-x-1 hover:-translate-y-1 hover:shadow-none cursor-pointer text-black"
+              style={{
+                transform: "rotate(-1deg)",
+                backfaceVisibility: "hidden",
+                transformStyle: "preserve-3d"
+              }}
             >
               TAKE ME HOME
-              <FaArrowRight size={24} />
+              <svg 
+                stroke="currentColor" 
+                fill="currentColor" 
+                strokeWidth="0" 
+                viewBox="0 0 448 512" 
+                height="24" 
+                width="24" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path>
+              </svg>
             </button>
 
           </section>
