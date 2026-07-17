@@ -19,6 +19,7 @@ import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 const CookieConsent = lazy(() => import('./components/CookieConsent'));
 const BlogPage = lazy(() => import('./components/BlogPage'));
+const NotFoundPage = lazy(() => import('./components/NotFoundPage'));
 import { audioSynth } from './utils/audioSynth';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
   const progressBarRef = useRef(null);
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const isBlogPage = currentPath.startsWith('/blog');
+  const is404Page = currentPath === '/404';
 
   // Auto-trigger Boot startup sound on first user gesture
   useEffect(() => {
@@ -140,7 +142,7 @@ function App() {
       {/* Top background accent bar */}
       <div className="fixed top-0 left-0 w-full h-2 bg-custom-yellow z-[90]" />
 
-      {!isBlogPage && (
+      {!isBlogPage && !is404Page && (
         <Navbar
           visible={showContent}
           onContactClick={() => setContactFormOpen(true)}
@@ -158,7 +160,11 @@ function App() {
         />
       </Suspense>
 
-      {isBlogPage ? (
+      {is404Page ? (
+        <Suspense fallback={null}>
+          <NotFoundPage />
+        </Suspense>
+      ) : isBlogPage ? (
         <Suspense fallback={null}>
           <BlogPage onContactClick={() => setContactOpen(true)} currentPath={currentPath} />
         </Suspense>
@@ -188,7 +194,7 @@ function App() {
         </main>
       )}
       
-      {!isBlogPage && <Footer />}
+      {!isBlogPage && !is404Page && <Footer />}
       <Suspense fallback={null}>
         <CookieConsent />
       </Suspense>
