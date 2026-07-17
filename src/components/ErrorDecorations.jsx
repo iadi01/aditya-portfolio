@@ -11,9 +11,9 @@ export default function ErrorDecorations() {
         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
       >
         <div className="relative w-12 h-12 flex items-center justify-center">
-          <span className="absolute h-8 w-1 bg-black rounded transform -rotate-[35deg] origin-bottom -translate-x-3 -translate-y-1" />
-          <span className="absolute h-9 w-1 bg-black rounded transform rotate-[0deg] origin-bottom -translate-y-3" />
-          <span className="absolute h-8 w-1 bg-black rounded transform rotate-[35deg] origin-bottom translate-x-3 -translate-y-1" />
+          <span className="absolute h-8 w-1 bg-black rounded-none transform -rotate-[35deg] origin-bottom -translate-x-3 -translate-y-1" />
+          <span className="absolute h-9 w-1 bg-black rounded-none transform rotate-[0deg] origin-bottom -translate-y-3" />
+          <span className="absolute h-8 w-1 bg-black rounded-none transform rotate-[35deg] origin-bottom translate-x-3 -translate-y-1" />
         </div>
       </motion.div>
 
@@ -24,9 +24,9 @@ export default function ErrorDecorations() {
         transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
       >
         <div className="relative w-12 h-12 flex items-center justify-center">
-          <span className="absolute h-8 w-1 bg-black rounded transform -rotate-[35deg] origin-bottom -translate-x-3 -translate-y-1" />
-          <span className="absolute h-9 w-1 bg-black rounded transform rotate-[0deg] origin-bottom -translate-y-3" />
-          <span className="absolute h-8 w-1 bg-black rounded transform rotate-[35deg] origin-bottom translate-x-3 -translate-y-1" />
+          <span className="absolute h-8 w-1 bg-black rounded-none transform -rotate-[35deg] origin-bottom -translate-x-3 -translate-y-1" />
+          <span className="absolute h-9 w-1 bg-black rounded-none transform rotate-[0deg] origin-bottom -translate-y-3" />
+          <span className="absolute h-8 w-1 bg-black rounded-none transform rotate-[35deg] origin-bottom translate-x-3 -translate-y-1" />
         </div>
       </motion.div>
 
@@ -42,8 +42,8 @@ export default function ErrorDecorations() {
             fill="none"
             stroke="black"
             strokeWidth="5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            strokeLinecap="square"
+            strokeLinejoin="miter"
           />
         </svg>
       </motion.div>
@@ -60,13 +60,13 @@ export default function ErrorDecorations() {
             fill="none"
             stroke="black"
             strokeWidth="5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            strokeLinecap="square"
+            strokeLinejoin="miter"
           />
         </svg>
       </motion.div>
 
-      {/* Pink Square (Left Side) */}
+      {/* Pink Square (Left Side) - Sharp 90-degree corners */}
       <motion.div
         className="absolute left-12 top-[58%] z-10"
         animate={{
@@ -78,10 +78,10 @@ export default function ErrorDecorations() {
           ease: "easeInOut"
         }}
       >
-        <div className="h-14 w-14 border-4 border-black bg-pink-400 shadow-[6px_6px_0px_black] rounded-md" />
+        <div className="h-14 w-14 border-4 border-black bg-pink-400 shadow-[6px_6px_0px_black] rounded-none" />
       </motion.div>
 
-      {/* Purple Square (Top Right) */}
+      {/* Purple Square (Top Right) - Sharp 90-degree corners */}
       <motion.div
         className="absolute right-12 top-48 z-10"
         animate={{
@@ -93,7 +93,7 @@ export default function ErrorDecorations() {
           ease: "easeInOut"
         }}
       >
-        <div className="h-6 w-6 border-4 border-black bg-[#6E5CFE] rounded-sm transform rotate-12" />
+        <div className="h-6 w-6 border-4 border-black bg-[#6E5CFE] rounded-none transform rotate-12" />
       </motion.div>
 
       {/* Dots (Right Side) */}
@@ -101,13 +101,13 @@ export default function ErrorDecorations() {
         {Array.from({ length: 25 }).map((_, i) => (
           <span
             key={i}
-            className="h-2.5 w-2.5 rounded-full bg-black"
+            className="h-2.5 w-2.5 rounded-none bg-black"
           />
         ))}
       </div>
 
-      {/* Bottom Left Stripes Block */}
-      <div className="absolute bottom-10 left-10 h-24 w-24 border-4 border-black bg-white shadow-[6px_6px_0_black] z-10 rounded-md overflow-hidden">
+      {/* Bottom Left Stripes Block - Sharp 90-degree corners */}
+      <div className="absolute bottom-10 left-10 h-24 w-24 border-4 border-black bg-white shadow-[6px_6px_0_black] z-10 rounded-none overflow-hidden">
         <div className="absolute inset-0 bg-[repeating-linear-gradient(-45deg,#000_0px,#000_6px,transparent_6px,transparent_14px)]" />
       </div>
 
@@ -134,6 +134,7 @@ export default function ErrorDecorations() {
             fill="#6E5CFE" 
             stroke="black" 
             strokeWidth="5" 
+            strokeLinejoin="miter"
           />
         </svg>
       </div>
