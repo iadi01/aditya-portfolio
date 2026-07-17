@@ -31,8 +31,11 @@ export default function ErrorShapes() {
         }}
       />
 
-      {/* Question Bubble wrapper containing both image and floating question mark */}
-      <motion.div
+      {/* Question Bubble */}
+      <motion.img
+        src={Bubble}
+        alt=""
+        draggable={false}
         className="
           absolute
           -top-8
@@ -42,56 +45,50 @@ export default function ErrorShapes() {
           sm:w-20
           md:w-24
           lg:w-28
-          h-auto
           select-none
           pointer-events-none
         "
         animate={{
-          y: [0, -15, 0],
-          rotate: [-8, 8, -8]
+          y: [0, -10, 0],
+          rotate: [-4, 4, -4]
         }}
         transition={{
-          duration: 2.5,
+          duration: 3,
           repeat: Infinity,
           ease: "easeInOut"
         }}
+      />
+
+      {/* Floating ? inside/over the bubble */}
+      <motion.span
+        className="
+          absolute
+          right-[26px]
+          sm:right-[34px]
+          md:right-[42px]
+          lg:right-[54px]
+          top-[16px]
+          sm:top-[12px]
+          z-40
+          font-shrikhand
+          font-black
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          text-black
+          select-none
+          pointer-events-none
+        "
+        animate={{
+          y: [0, -5, 0]
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity
+        }}
       >
-        <div className="relative w-full h-full flex items-center justify-center">
-          <img
-            src={Bubble}
-            alt=""
-            draggable={false}
-            className="w-full h-full select-none pointer-events-none"
-          />
-          {/* Floating ? positioned over the yellow bubble */}
-          <motion.span
-            className="
-              absolute
-              top-[20%]
-              left-[45%]
-              transform -translate-x-1/2 -translate-y-1/2
-              z-40
-              font-shrikhand
-              font-black
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              text-black
-              select-none
-            "
-            animate={{
-              y: [0, -5, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            ?
-          </motion.span>
-        </div>
-      </motion.div>
+        ?
+      </motion.span>
 
       {/* Spiral above head */}
       <motion.div
@@ -102,7 +99,7 @@ export default function ErrorShapes() {
           z-40
         "
         animate={{
-          rotate: [-10, 10, -10],
+          rotate: [-10, 10, -10]
         }}
         transition={{
           duration: 4,

@@ -75,7 +75,7 @@ export default function ErrorDecorations() {
           duration: 5,
         }}
       >
-        <div className="h-14 w-14 border-4 border-black bg-custom-pink shadow-[6px_6px_0px_black]" />
+        <div className="h-14 w-14 border-4 border-black bg-pink-400 shadow-[6px_6px_0px_black]" />
       </motion.div>
 
       {/* Purple Square */}
@@ -89,7 +89,7 @@ export default function ErrorDecorations() {
           duration: 3,
         }}
       >
-        <div className="h-6 w-6 border-4 border-black bg-custom-purple" />
+        <div className="h-6 w-6 border-4 border-black bg-[#6E5CFE]" />
       </motion.div>
 
       {/* Dots */}
@@ -121,6 +121,18 @@ export default function ErrorDecorations() {
       >
         ×
       </motion.div>
+
+      {/* Purple staircase at the bottom right corner */}
+      <div className="absolute bottom-0 right-0 z-0 pointer-events-none">
+        <svg viewBox="0 0 100 100" className="w-36 h-36 md:w-52 md:h-52 drop-shadow-[6px_6px_0px_black]">
+          <path 
+            d="M 0,100 L 0,75 L 25,75 L 25,50 L 50,50 L 50,25 L 75,25 L 75,0 L 100,0 L 100,100 Z" 
+            fill="#6E5CFE" 
+            stroke="black" 
+            strokeWidth="5" 
+          />
+        </svg>
+      </div>
     </div>
   );
 }
