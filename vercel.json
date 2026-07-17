@@ -20,6 +20,14 @@
     {
       "source": "/blog/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/404",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ]
 }
