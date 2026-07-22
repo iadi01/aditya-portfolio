@@ -216,6 +216,7 @@ export const blogs = [
     slug: "inside-aditya-portfolio-designing-developer-showcase",
     content: [
       "Every developer needs a digital home, and this website—Aditya Portfolio—is mine. Built using React, Vite, and Tailwind CSS v4, this portfolio represents my journey as an aspiring Full Stack Developer from Jamshedpur, India. My goal was to create a fast, responsive, and memorable website that showcases my projects and coding skills.",
+      "![Portfolio Showcase](/0722(1).gif)",
       "Aditya Portfolio stands out by adopting a bold neobrutalist design language, featuring high-contrast borders, raw colors, and interactive terminal widgets. Under the hood, it is optimized for Core Web Vitals to achieve a fast LCP (Largest Contentful Paint) and Speed Index. The site also includes interactive features like a custom browser terminal, sound synthesis, and real-time navigation.",
       "This Aditya Portfolio website showcases several projects, including GitAura (developer analytics), Weather App (live forecasts), and TeamJams (collaborative WebSocket space). By combining custom frontend features with clean SEO practices, I ensure recruiters can find my work and get in touch easily."
     ]

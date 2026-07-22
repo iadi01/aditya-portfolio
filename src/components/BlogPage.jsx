@@ -4,30 +4,42 @@ import { blogs, personalInfo } from '../data/personalData';
 import { navigateTo } from '../utils/router';
 
 const renderParagraphContent = (text) => {
-  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const regex = /(!)?\[([^\]]*)\]\(([^)]+)\)/g;
   const parts = [];
   let lastIndex = 0;
   let match;
 
   while ((match = regex.exec(text)) !== null) {
-    const [fullMatch, linkText, url] = match;
+    const [fullMatch, isImage, label, url] = match;
     const startIndex = match.index;
 
     if (startIndex > lastIndex) {
       parts.push(text.substring(lastIndex, startIndex));
     }
 
-    parts.push(
-      <a 
-        key={startIndex} 
-        href={url} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="text-[#3b82f6] hover:underline font-bold"
-      >
-        {linkText}
-      </a>
-    );
+    if (isImage) {
+      parts.push(
+        <div key={startIndex} className="my-6 border-4 border-black rounded-2xl overflow-hidden shadow-neo bg-white max-w-full flex justify-center">
+          <img 
+            src={url} 
+            alt={label || "Blog Media"} 
+            className="w-auto max-h-[400px] object-contain" 
+          />
+        </div>
+      );
+    } else {
+      parts.push(
+        <a 
+          key={startIndex} 
+          href={url} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-[#3b82f6] hover:underline font-bold"
+        >
+          {label}
+        </a>
+      );
+    }
 
     lastIndex = regex.lastIndex;
   }
