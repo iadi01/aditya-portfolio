@@ -213,6 +213,7 @@ export const blogs = [
     tags: ["Portfolio", "Web Dev", "React"],
     category: "Web Development",
     color: "bg-blue-100",
+    image: "/0722(1).gif",
     slug: "inside-aditya-portfolio-designing-developer-showcase",
     content: [
       "Every developer needs a digital home, and this website—Aditya Portfolio—is mine. Built using React, Vite, and Tailwind CSS v4, this portfolio represents my journey as an aspiring Full Stack Developer from Jamshedpur, India. My goal was to create a fast, responsive, and memorable website that showcases my projects and coding skills.",

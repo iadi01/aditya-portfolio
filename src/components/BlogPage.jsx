@@ -194,6 +194,16 @@ export default function BlogPage({ onContactClick, currentPath }) {
                     </div>
                   </div>
 
+                  {activeBlog.image && (
+                    <div className="mb-8 border-4 border-black rounded-2xl overflow-hidden shadow-neo bg-black/5 flex justify-center">
+                      <img 
+                        src={activeBlog.image} 
+                        alt={activeBlog.title} 
+                        className="w-full max-h-[480px] object-cover" 
+                      />
+                    </div>
+                  )}
+
                   <div className="space-y-6 text-base md:text-lg font-medium text-gray-800 leading-relaxed font-sans">
                     {activeBlog.content.map((p, idx) => (
                       <p key={idx}>{renderParagraphContent(p)}</p>
@@ -251,8 +261,14 @@ export default function BlogPage({ onContactClick, currentPath }) {
                   key={blog.slug}
                   className="bg-white border-4 border-black rounded-3xl shadow-neo overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition-transform"
                 >
-                  {/* Card Header color accent */}
-                  <div className={`h-4 border-b-4 border-black ${cardColors[idx % cardColors.length]}`} />
+                  {/* Card Header color accent or Feature Image */}
+                  {blog.image ? (
+                    <div className="w-full h-48 border-b-4 border-black overflow-hidden bg-black/5 flex items-center justify-center">
+                      <img src={blog.image} alt={blog.title} className="w-full h-full object-cover" />
+                    </div>
+                  ) : (
+                    <div className={`h-4 border-b-4 border-black ${cardColors[idx % cardColors.length]}`} />
+                  )}
 
                   {/* Card Body */}
                   <div className="p-6 flex flex-col flex-1 justify-between">
